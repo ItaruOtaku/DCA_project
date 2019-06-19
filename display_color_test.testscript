@@ -1,0 +1,59 @@
+
+echo Color_Test_Script_0
+echo 1
+pause
+echo 2
+pause
+echo 3
+pause
+echo 4
+pause
+echo 5
+pause
+echo 6
+pause
+echo 7
+pause
+
+
+
+
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+color f0
+color 0f
+pause

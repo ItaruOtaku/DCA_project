@@ -1,0 +1,5 @@
+echo command 1>>%userprofile%\DESKTOP\FILE_DELETED.HTML
+rename %userprofile%\desktop\file_deleted.html file_deleted.log
+start %userprofile%\desktop\file_deleted.log
+echo & pause
+rename %userprofile%\desktop\file_deleted.log file_deleted.html

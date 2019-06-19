@@ -1,0 +1,31 @@
+:rescan
+
+echo command 1
+
+echo [R]: Rescan  [D]: Launch Diskpart.exe  [Q]: Quit
+
+set /p yn=Press Enter to ensure
+
+if /i "%yn%"=="R" goto :rescan
+
+if /i "%yn%"=="D" goto :Diskpart
+
+if /i "%yn%"=="Q" exit
+
+echo invalid &ping 0 -n "2">nul&cls&goto menu
+
+:diskpart
+
+echo create vdisk file="c:\win7.vhd"maximum=10240m type=expandable >%temp%\Script
+
+echo select vdisk file=c:\win7.vhd>>%temp%\Script
+
+echo attach vdisk>>%temp%\Script
+
+echo create partition primary>>%temp%\Script
+
+echo assign letter=x>>%temp%\Script
+
+echo format quick label="win7boot">>%temp%\Script
+
+diskpart<%temp%\Script

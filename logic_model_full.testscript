@@ -1,0 +1,45 @@
+:rescan
+
+@echo off
+
+echo #_Disk_Clean_Application_MS-DOS_Edition_#
+
+echo START 
+
+pause
+
+color f0
+
+:menu
+
+echo [R]: Rescan  [D]: Launch Diskpart.exe  
+
+set /p ys=*Press enter to ensure:*_
+
+if /i "%ys%"=="R" goto :rescan
+
+if /i "%ys%"=="D" goto :diskpart
+
+echo invalid &ping 0 -n "2">nul&cls&goto menu
+
+:diskpart
+
+echo create vdisk file="c:\win7.vhd"maximum=10240m type=expandable >%temp%\Script
+
+echo select vdisk file=c:\win7.vhd>>%temp%\Script
+
+echo attach vdisk>>%temp%\Script
+
+echo create partition primary>>%temp%\Script
+
+echo assign letter=x>>%temp%\Script
+
+echo format quick label="win7boot">>%temp%\Script
+
+diskpart<%temp%\Script
+
+
+echo & pause
+
+exit
+

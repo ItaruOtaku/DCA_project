@@ -1,0 +1,21 @@
+@echo off
+
+set ymd=%date:~0,10%%date:~5,2%%date:~8,2%
+
+set ymd_t=%ymd%_%time:~0,2%%time:~3,2%%time:~6,2%
+
+set ymd_t=%ymd_t: =0%
+
+echo start at:%ymd_t%>>%ymd%
+
+echo command 1
+
+echo command 2
+
+echo command 3
+
+set ymd_t=%ymd%_%time:~0,2%%time:~3,2%%time:~6,2%
+
+set ymd_t=%ymd_t: =0%
+
+echo end at:%ymd_t%>>%ymd%

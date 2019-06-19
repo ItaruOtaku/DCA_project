@@ -1,0 +1,8 @@
+del /f /s /q %systemdrive%\*.dmp
+del /f /s /q %systemdrive%\*.ftg
+del /f /s /q %systemdrive%\*.prv
+del /f /s /q %systemdrive%\*.errorlog.txt
+del /f /s /q %systemdrive%\*.diz
+del /f /s /q %systemdrive%\*.wbk
+del /f /s /q %systemdrive%\*.xlk
+del /f /s /q %systemdrive%\*.spc

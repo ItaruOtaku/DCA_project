@@ -1,0 +1,26 @@
+@echo off
+:a
+echo a
+
+:b
+echo b
+
+echo Start advanced mode? [Y]: Yes  [N]: No  
+
+set /p yn=Press [Y] to keep scanning, and [N] to end this program
+if /i "%yn%"=="Y" goto a
+
+if /i "%yn%"=="N" exit
+
+if /i "%yn%"=="m" goto advanced
+
+echo invalid &ping 0 -n "2">nul&cls&goto menu
+
+:advanced
+
+echo command 2
+
+pause
+
+:c
+echo c

@@ -1,0 +1,38 @@
+@echo off
+
+
+:rescan
+echo command 1
+
+
+
+echo Start advanced mode? [Y]: Yes  [N]: No  
+
+set /p yn=Press [Y] to keep scanning, and [N] to end this program
+if /i "%yn%"=="Y" goto :advanced
+
+if /i "%yn%"=="N" exit
+
+echo invalid &ping 0 -n "2">nul&cls&goto menu
+
+:advanced
+
+echo command 2
+
+color f0
+
+echo [R]: Rescan  [D]: Launch Diskpart.exe  [Q]: Quit
+
+set /p yn=Press Enter to ensure
+
+if /i "%yn%"=="R" goto :rescan
+
+if /i "%yn%"=="D" goto :Diskpart
+
+if /i "%yn%"=="Q" exit
+
+echo invalid &ping 0 -n "2">nul&cls&goto menu
+
+:diskpart
+
+start diskpart.exe
